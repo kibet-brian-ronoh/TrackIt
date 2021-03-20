@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportStolen">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/reportToolbar"
+        android:background="@color/teal_700"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/lightblue"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/reportToolbar"
+        android:textAlignment="textStart"
+        android:id="@+id/call_911"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call 911 to report stolen car"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_next"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/call_911"
+        android:id="@+id/cardview2"
+        android:backgroundTint="@color/lightblue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/carImage"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/subaru" />
+
+            <TextView
+                android:id="@+id/car_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/carImage"
+                android:text="Missing Car Alert!"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numberPlate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/car_alert"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/carImage"
+                android:text="KCP 584K"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/make"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numberPlate"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/carImage"
+                android:text="Make:"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numberPlate"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/make"
+                android:text="Model:"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/carYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/model"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/carImage"
+                android:text="Year:"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lastKnownLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/carImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Last known location:"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/latlonglink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/carImage"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/lastKnownLocation"
+                android:text="Link to google maps"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sentence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lastKnownLocation"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="If you have seen the above vehicle please contact me on 07519546 or report to the nearest police station."
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sentence"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/light"
+                android:drawableRight="@drawable/ic_baseline_share"
+                android:text="Share" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

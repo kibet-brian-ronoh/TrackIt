@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TrackIt</string>
+    <string name="title_activity_location_map">Map</string>
+    <string name="components">
+        <br>
+            Arduino Uno \n
+        </br>
+        <br>
+            SIM 808 module \n
+        </br>
+        <br>
+            GPS antenna \n
+        </br>
+        <br>
+            GSM antenna \n
+        </br>
+    </string>
+    <string name="instructions">
+        <br>
+            Insert the sim card into the SIM 808 module. Make sure the sim is pinless i.e have no PIN protection \n
+        </br>
+        <br>
+            Power the module with a 9V-2A power adapter \n
+        </br>
+        <br>
+            Make sure the GPS antenna faces the sky and that there are no obstacles to get a GPS fix. \n
+        </br>
+    </string>
+    <string name="not_empty">Please enter a valid car make</string>
+</resources>

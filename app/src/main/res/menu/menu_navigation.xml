@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/current_location"
+        android:title="Current Location"
+        android:icon="@drawable/ic_location"/>
+
+    <item
+        android:id="@+id/location_history"
+        android:title="Location History"
+        android:icon="@drawable/ic_location_history"/>
+
+    <item
+        android:id="@+id/more"
+        android:title="More"
+        android:icon="@drawable/ic_baseline_more"/>
+
+</menu>

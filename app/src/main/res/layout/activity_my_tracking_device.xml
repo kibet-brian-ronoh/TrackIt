@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyTrackingDevice">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/trackingDeviceToolbar"
+        android:background="@color/teal_700"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:backgroundTint="@color/lightblue"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/trackingDeviceToolbar"
+        android:id="@+id/cardviewImeiImsi">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IMEI"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/TDImei"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="256378456156897"
+                android:textSize="22sp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/TDImei"
+                android:id="@+id/imeiNo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IMSI"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/TDImsi"
+                android:layout_below="@id/TDImei"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0704897562"
+                android:textSize="22sp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/TDImsi"
+                android:id="@+id/imsiNo"
+                android:layout_below="@id/TDImei"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/cardviewImeiImsi"
+        android:backgroundTint="@color/lightblue"
+        android:layout_marginTop="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/abttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="About Tracking device"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/abttitle"
+                android:layout_marginTop="10dp"
+                android:text="The tracking device is built on an Arduino Uno Microcontroller, GSM and GPS module. It has a sim card installed in it and needs to have an active data and SMS subscription."/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

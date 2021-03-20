@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundcolor"
+    tools:context=".CreateAccount2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/addVehicletext"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="10sp"
+            android:singleLine="false"
+            android:text="Add your vehicle details"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttoncolor"
+            android:text="Add"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="230dp"
+            android:layout_gravity="center"
+            android:id="@+id/addvehicle"/>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttoncolor"
+            android:text="SKIP NOW TO ADD LATER"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/skipnow"/>
+
+    </LinearLayout>
+
+</LinearLayout>

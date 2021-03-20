@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundcolor"
+    android:orientation="vertical"
+    tools:context=".CreateAccount">
+
+    <TextView
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:text="Here's your first step with us"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:textColor="#016158"/>
+
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edittextcustom"
+        android:hint=" First name"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        tools:ignore="RtlCompat" />
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittextcustom"
+        android:hint=" Last name"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        tools:ignore="RtlCompat" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittextcustom"
+        android:hint=" Email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="textStart"
+        tools:ignore="RtlCompat" />
+
+    <EditText
+        android:id="@+id/phoneno"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittextcustom"
+        android:hint=" Phone number"
+        android:inputType="phone"
+        android:textAlignment="textStart"
+        tools:ignore="RtlCompat" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittextcustom"
+            android:hint=" Password"
+            android:inputType="textPassword"
+            android:textAlignment="textStart"
+            tools:ignore="RtlCompat" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/confirmpassword"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittextcustom"
+            android:hint=" Confirm Password"
+            android:inputType="textPassword"
+            android:textAlignment="textStart"
+            tools:ignore="RtlCompat" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/continuebtn"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/buttoncolor"
+        android:text="Continue"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginoption"
+        android:text="Already have an account? Log in"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="#253CBD"/>
+</LinearLayout>
