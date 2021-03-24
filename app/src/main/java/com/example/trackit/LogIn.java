@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,15 +58,15 @@ public class LogIn extends AppCompatActivity {
             public void onClick(View v) {
                 String memail = email.getText().toString().trim();
                 String mpassword = password.getText().toString().trim();
-                if (!memail.isEmpty() || !mpassword.isEmpty()){
+
+                AwesomeValidation awesomeValidation = new AwesomeValidation(ValidationStyle.COLORATION);
+                awesomeValidation.addValidation(email, Patterns.EMAIL_ADDRESS, "Please insert a valid email address");
+
+                CheckIfEmpty checkIfEmpty = new CheckIfEmpty();
+                boolean passValidation = checkIfEmpty.IsItEmpty(password);
+
+                if (awesomeValidation.validate() && passValidation){
                     LoginFunction(memail, mpassword);
-                }
-                else {
-                    builder.setIcon(R.drawable.ic_error);
-                    builder.setTitle("Empty fields!");
-                    builder.setMessage("Please fill in all the fields required");
-                    builder.setCancelable(true);
-                    builder.show();
                 }
             }
         });
