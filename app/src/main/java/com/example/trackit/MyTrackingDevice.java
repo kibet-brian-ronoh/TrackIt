@@ -4,8 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.widget.TextView;
+
+import java.util.HashMap;
 
 public class MyTrackingDevice extends AppCompatActivity {
+    TextView IMEI, IMSI;
+    String Imei, Imsi;
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +23,20 @@ public class MyTrackingDevice extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        IMEI = findViewById(R.id.imeiNo);
+        IMSI = findViewById(R.id.imsiNo);
+
+        sessionManager = new SessionManager(this);
+        HashMap<String, String> trackingDetails = new HashMap<>();
+        trackingDetails = sessionManager.getUserDetail();
+
+        Imei = trackingDetails.get("Imei");
+        Imsi = trackingDetails.get("Imsi");
+
+        IMEI.setText(Imei);
+        IMSI.setText(Imsi);
+
     }
     public boolean onSupportNavigateUp(){
         onBackPressed();

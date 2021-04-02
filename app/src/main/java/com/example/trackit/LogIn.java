@@ -99,8 +99,23 @@ public class LogIn extends AppCompatActivity {
 
                         if (code.equals("1")){
                             String fname = jsonObject.getString("firstName");
+                            String lname = jsonObject.getString("lastName");
+                            String name = fname + " " + lname;
                             String email = jsonObject.getString("email");
-                            sessionManager.createSession(fname, email);
+                            String ownerID = jsonObject.getString("ownerID");
+                            String phoneNo = jsonObject.getString("phoneNo");
+                            String vehicleID = jsonObject.getString("vehicleID");
+                            String make = jsonObject.getString("make");
+                            String model = jsonObject.getString("model");
+                            String year = jsonObject.getString("year");
+                            String type = jsonObject.getString("type");
+                            String plateNumber = jsonObject.getString("plateNumber");
+                            String color = jsonObject.getString("color");
+                            String trackingDeviceID = jsonObject.getString("trackingDeviceID");
+                            String IMEI = jsonObject.getString("IMEI");
+                            String IMSI = jsonObject.getString("IMSI");
+
+                            sessionManager.createSession(name, email, ownerID, phoneNo, vehicleID, make, model, year, type, plateNumber, color, trackingDeviceID, IMEI, IMSI);
                             startActivity(new Intent(LogIn.this, LocationMap.class));
                             finish();
                         }
@@ -178,7 +193,7 @@ public class LogIn extends AppCompatActivity {
             builder1.setIcon(R.drawable.ic_no_internet);
             builder1.setTitle("No Connection!");
             builder1.setMessage("Check your internet connection and try again");
-            builder1.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
+            builder1.setPositiveButton("Dismiss", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.cancel();

@@ -126,7 +126,7 @@ public class TrackingDeviceDetails extends AppCompatActivity {
                         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                startActivity(new Intent(TrackingDeviceDetails.this, LocationMap.class));
+                                startActivity(new Intent(TrackingDeviceDetails.this, LogIn.class));
                             }
                         });
                     }

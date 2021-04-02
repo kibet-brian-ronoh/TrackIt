@@ -18,13 +18,26 @@ public class SessionManager {
 
     public SessionManager(Context context) {
         this.context = context;
-        sharedPreferences =context.getSharedPreferences("NAME", PRIVATE_MODE);
+        sharedPreferences =context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = sharedPreferences.edit();
     }
-    public void createSession(String name, String email){
+    public void createSession(String name, String email, String ownerID, String phoneNo, String vehicleID, String make, String model, String year, String type, String plateNumber, String color, String trackingDeviceID, String Imei, String Imsi){
         editor.putBoolean("LOGIN", true);
         editor.putString("NAME", name);
         editor.putString("EMAIL", email);
+        editor.putString("ownerID", ownerID);
+        editor.putString("phoneNo", phoneNo);
+        editor.putString("vehicleID", vehicleID);
+        editor.putString("make", make);
+        editor.putString("model", model);
+        editor.putString("year", year);
+        editor.putString("type", type);
+        editor.putString("plateNumber", plateNumber);
+        editor.putString("color", color);
+        editor.putString("trackingDeviceID", trackingDeviceID);
+        editor.putString("Imei", Imei);
+        editor.putString("Imsi", Imsi);
+
         editor.apply();
     }
     public Boolean isLogin(){
@@ -41,6 +54,19 @@ public class SessionManager {
         HashMap<String, String> user = new HashMap<>();
         user.put(NAME, sharedPreferences.getString(NAME, null));
         user.put(EMAIL, sharedPreferences.getString(EMAIL, null));
+        user.put("ownerID", sharedPreferences.getString("ownerID", null));
+        user.put("phoneNo", sharedPreferences.getString("phoneNo", null));
+        user.put("vehicleID", sharedPreferences.getString("vehicleID", null));
+        user.put("make", sharedPreferences.getString("make", null));
+        user.put("model", sharedPreferences.getString("model", null));
+        user.put("year", sharedPreferences.getString("year", null));
+        user.put("type", sharedPreferences.getString("type", null));
+        user.put("plateNumber", sharedPreferences.getString("plateNumber", null));
+        user.put("color", sharedPreferences.getString("color", null));
+        user.put("trackingDeviceID", sharedPreferences.getString("trackingDeviceID", null));
+        user.put("Imei", sharedPreferences.getString("Imei", null));
+        user.put("Imsi", sharedPreferences.getString("Imsi", null));
+
         return user;
     }
     public void Logout() {

@@ -24,7 +24,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jack Peters"
             android:textSize="20dp"
             android:layout_centerHorizontal="true"
             android:textColor="@color/black"
@@ -36,7 +35,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="jackpeters@email.com"
             android:textSize="15dp"
             android:layout_below="@id/name"
             android:id="@+id/mail"
@@ -69,7 +67,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+254719322601"
                 android:textSize="18sp"
                 android:id="@+id/no2"
                 android:layout_marginTop="5dp"
@@ -115,7 +112,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="jackpeters@email.com"
                 android:textSize="15sp"
                 android:id="@+id/emailtxt2"
                 android:layout_marginTop="5dp"
