@@ -7,8 +7,10 @@
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
 
     <application
@@ -18,7 +20,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HelpInstallTrackingDevice"></activity>
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".ResetPassword" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ShowHistory"
+            android:label="@string/title_activity_show_history" />
+        <activity android:name=".HelpInstallTrackingDevice" />
         <activity android:name=".MyTrackingDevice" />
         <activity
             android:name=".ReportStolen"
@@ -34,26 +53,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
         <activity
             android:name=".LocationMap"
             android:label="@string/title_activity_location_map" />
         <activity android:name=".TrackingDeviceDetails" />
         <activity android:name=".VehicleDetails" />
         <activity android:name=".CreateAccount2" />
-        <activity android:name=".LogIn"
-            android:parentActivityName=".CreateAccount"/>
+        <activity
+            android:name=".LogIn"
+            android:parentActivityName=".CreateAccount" />
         <activity android:name=".CreateAccount" />
         <activity android:name=".SplashPage" />
     </application>

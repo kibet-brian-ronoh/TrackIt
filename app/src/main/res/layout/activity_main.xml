@@ -11,11 +11,17 @@
     tools:context=".SplashPage">
 
     <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:src="@drawable/trackit_image"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
         android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="-80dp"
         android:src="@drawable/trackitlogo" />
 
     <TextView
@@ -24,6 +30,7 @@
         android:layout_gravity="center"
         android:fontFamily="sans-serif"
         android:gravity="center"
+        android:layout_marginTop="10dp"
         android:text="We protect what you treasure most"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="20sp"
@@ -33,9 +40,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Get started with"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="160dp"
         android:id="@+id/getstarted"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:textSize="16sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,14 +70,15 @@
             android:text="LOGIN" />
 
     </LinearLayout>
+
     <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Forgot password?"
-        android:layout_gravity="center"
         android:id="@+id/fgtpassword"
-        android:background="@drawable/buttoncolor"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:textColor="#FFFFFF"/>
+        android:background="@drawable/buttoncolor"
+        android:text="Forgot password?"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

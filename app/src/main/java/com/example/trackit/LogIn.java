@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -36,6 +37,7 @@ import java.util.Map;
 public class LogIn extends AppCompatActivity {
     private Button login;
     private EditText email, password;
+    private TextView resetPassword;
     AlertDialog.Builder builder;
     private ProgressBar progressBar;
     private String Url = "https://kiptrack.000webhostapp.com/login.php";
@@ -52,6 +54,7 @@ public class LogIn extends AppCompatActivity {
         sessionManager = new SessionManager(this);
         progressBar = findViewById(R.id.login_loading);
         builder = new AlertDialog.Builder(LogIn.this);
+        resetPassword = findViewById(R.id.fgtpasswordlogin);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +71,13 @@ public class LogIn extends AppCompatActivity {
                 if (awesomeValidation.validate() && passValidation){
                     LoginFunction(memail, mpassword);
                 }
+            }
+        });
+
+        resetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LogIn.this, ResetPassword.class));
             }
         });
     }

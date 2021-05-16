@@ -6,12 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".LocationHistory">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/locations"
+        android:layout_marginTop="30dp"
+        android:id="@+id/locations_img"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location History"
+        android:textSize="32sp"
+        android:id="@+id/selectDate"
+        android:layout_below="@+id/locations_img"
+        android:text="Select date:"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="YYYY-MM-DD"
         android:textSize="22sp"
-        android:layout_centerInParent="true"/>
+        android:layout_below="@id/selectDate"
+        android:layout_marginTop="25dp"
+        android:id="@+id/selectdateEt"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/slctdate"
+        android:src="@drawable/ic_baseline_calendar_today_24"
+        android:layout_toRightOf="@id/selectdateEt"
+        android:layout_below="@id/selectDate"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/historyLoad"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/selectdateEt"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOW"
+        android:layout_below="@id/historyLoad"
+        android:id="@+id/showBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

@@ -16,7 +16,7 @@ public class CreateAccount2 extends AppCompatActivity {
         setContentView(R.layout.activity_create_account2);
 
         addVehicle = findViewById(R.id.addvehicle);
-        skip = findViewById(R.id.skipnow);
+        //skip = findViewById(R.id.skipnow);
 
         final String firstName = getIntent().getStringExtra("firstName");
         final String lastName = getIntent().getStringExtra("lastName");
@@ -38,11 +38,11 @@ public class CreateAccount2 extends AppCompatActivity {
 
             }
         });
-        skip.setOnClickListener(new View.OnClickListener() {
+        /*skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(CreateAccount2.this, LocationMap.class));
             }
-        });
+        });*/
     }
 }

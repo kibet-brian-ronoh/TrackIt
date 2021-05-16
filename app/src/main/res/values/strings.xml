@@ -27,4 +27,5 @@
         </br>
     </string>
     <string name="not_empty">Please enter a valid car make</string>
+    <string name="title_activity_show_history">Map</string>
 </resources>

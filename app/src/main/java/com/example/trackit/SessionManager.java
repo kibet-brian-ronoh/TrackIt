@@ -21,6 +21,11 @@ public class SessionManager {
         sharedPreferences =context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = sharedPreferences.edit();
     }
+
+    public void editUserDetail(String prefName, String valueToEdit){
+        editor.putString(prefName, valueToEdit);
+        editor.apply();
+    }
     public void createSession(String name, String email, String ownerID, String phoneNo, String vehicleID, String make, String model, String year, String type, String plateNumber, String color, String trackingDeviceID, String Imei, String Imsi){
         editor.putBoolean("LOGIN", true);
         editor.putString("NAME", name);

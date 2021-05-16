@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Call 911 to report stolen car"
+                android:text="Call 911 to report stolen car now"
                 android:layout_marginLeft="8dp"
                 android:layout_centerVertical="true"
                 android:textSize="16sp"/>
@@ -145,15 +145,16 @@
                 android:layout_marginLeft="1dp"
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@id/lastKnownLocation"
-                android:text="Link to google maps"
+                android:text="http://maps.google.com/maps?q=24.197611,120.780512"
                 android:textSize="15sp"
+                android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sentence"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/lastKnownLocation"
+                android:layout_below="@id/latlonglink"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:text="If you have seen the above vehicle please contact me on 07519546 or report to the nearest police station."
@@ -161,7 +162,8 @@
                 android:textStyle="bold" />
 
             <Button
-                android:layout_width="100dp"
+                android:id="@+id/sharebtn"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sentence"
                 android:layout_alignParentEnd="true"

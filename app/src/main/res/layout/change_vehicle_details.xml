@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal">
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="New Make"
+        android:id="@+id/newMake"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="New Model"
+        android:id="@+id/newModel"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp" />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="New Manufacture Year"
+        android:id="@+id/newYear"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp" />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="New Vehicle Type"
+        android:id="@+id/newType"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp" />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="New vehicle color"
+        android:id="@+id/newColor"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp" />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="New Vehicle number plate"
+        android:id="@+id/newReg"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp" />
+
+</LinearLayout>

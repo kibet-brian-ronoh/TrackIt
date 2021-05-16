@@ -12,4 +12,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightblue">#BEB9C6</color>
     <color name="light">#D1CED6</color>
+    <color name="profilebackground">#15776D</color>
 </resources>

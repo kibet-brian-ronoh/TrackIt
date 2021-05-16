@@ -18,7 +18,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="50dp"
             android:gravity="center_horizontal"
             android:lineSpacingExtra="10sp"
             android:singleLine="false"
@@ -26,25 +26,36 @@
             android:textSize="32dp"
             android:textStyle="bold" />
 
-        <Button
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/addvehicledetails"
+            android:src="@drawable/vehicle_d"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/ad"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/buttoncolor"
-            android:text="Add"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="230dp"
             android:layout_gravity="center"
-            android:id="@+id/addvehicle"/>
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="10sp"
+            android:singleLine="false"
+            android:text="You will need to input your vehicle's details such as model, make, type, year of manufacture. This way, your vehicle can be easier to report in case of theft."
+            android:textSize="18sp" />
 
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@drawable/buttoncolor"
-            android:text="SKIP NOW TO ADD LATER"
+            android:text="NEXT"
             android:textColor="#FFFFFF"
-            android:layout_marginTop="20dp"
+            android:drawableRight="@drawable/ic_next_white"
+            android:layout_marginTop="60dp"
             android:layout_gravity="center"
-            android:id="@+id/skipnow"/>
+            android:id="@+id/addvehicle"/>
+
 
     </LinearLayout>
 

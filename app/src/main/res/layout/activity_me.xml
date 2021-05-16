@@ -1,141 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:background="@color/white"
-    tools:context=".Me">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@color/lightblue">
+        android:layout_height="match_parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:id="@+id/user2"
-            android:src="@drawable/ic_baseline_account"
+        <ImageView
+            android:id="@+id/header_cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="222dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/car_owner" />
+
+        <ImageButton
+            android:id="@+id/user_profile_photo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/header_cover_image"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="-60dp"
+            android:background="@drawable/profile_circular_border_imageview"
+            android:elevation="5dp"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:id="@+id/name"
-            android:layout_below="@id/user2"
-            android:layout_marginTop="10dp"/>
+            android:layout_below="@+id/header_cover_image"
+            android:background="@color/profilebackground"
+            android:elevation="4dp"
+            android:paddingBottom="24dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="76dp"
+                android:text="Pelumi Eniodunmo"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text="UI/UX, Android developer, Software and AI Engineer"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:layout_below="@id/name"
-            android:id="@+id/mail"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"/>
+            android:layout_below="@+id/profile_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:id="@+id/emailt"
+                    android:textSize="13sp"
+                    android:textColor="@color/teal_700"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_model"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_below="@+id/emailt"
+                    android:text="joey@sharenofood.com"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/changeemailbtn"
+                    android:layout_below="@+id/emailt"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="62dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="-22dp"
+                    android:layout_toRightOf="@+id/car_model"
+                    android:clickable="true"
+                    android:src="@drawable/ic_baseline_edit" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone number"
+                    android:id="@+id/phone1"
+                    android:textSize="13sp"
+                    android:textColor="@color/teal_700"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_yeartxt"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_below="@+id/phone1"
+                    android:text="0719322601"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/changephonebtn"
+                    android:layout_below="@+id/phone1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="149dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="-12dp"
+                    android:layout_toRightOf="@+id/car_yeartxt"
+                    android:clickable="true"
+                    android:src="@drawable/ic_baseline_edit" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:id="@+id/changePass"
+                android:elevation="4dp"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/passwrd"
+                    android:textSize="18sp"
+                    android:textColor="@color/teal_700"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
     </RelativeLayout>
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="8dp"
-        android:layout_below="@+id/settingsToolbar"
-        android:textAlignment="textStart"
-        android:id="@+id/phone"
-        android:clickable="true">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Phone number"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:id="@+id/no"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="15dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:id="@+id/no2"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_below="@+id/no"/>
-
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_baseline_edit"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/btn2"
-                android:layout_marginRight="15dp"
-                android:id="@+id/changephonebtn"/>
-
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/settingsToolbar"
-        android:textAlignment="textStart"
-        android:id="@+id/myemail"
-        android:clickable="true">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Email"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:id="@+id/emailtxt"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="15dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:id="@+id/emailtxt2"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_below="@+id/emailtxt"/>
-
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_baseline_edit"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/btn2"
-                android:layout_marginRight="15dp"
-                android:id="@+id/changeemailbtn"/>
-
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Change Password"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/btn2"/>
-</LinearLayout>
+</ScrollView>
